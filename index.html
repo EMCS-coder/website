@@ -42,14 +42,16 @@
 </head>
 <body>
 
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
     <header>
-        <nav class="container">
+        <nav class="container" aria-label="Hauptnavigation">
             <div class="logo">
                 <img src="assets/images/Logo1.jpg" alt="EM ComputerService Logo">
                 <span>EM ComputerService</span>
             </div>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menü ein-/ausblenden">
+            <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"><span></span></label>
             <ul class="nav-menu">
                 <li><a href="#home">Start</a></li>
                 <li><a href="#about">Über uns</a></li>
@@ -59,6 +61,7 @@
         </nav>
     </header>
 
+    <main id="main-content">
     <section id="home" class="hero">
         <div class="container">
             <h1>Ihr PC streikt? Wir helfen schnell und zuverlässig.</h1>
@@ -116,6 +119,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <footer>
         <div class="container">
