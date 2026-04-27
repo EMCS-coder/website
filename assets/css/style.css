@@ -26,6 +26,11 @@ body {
     padding: 0 20px;
 }
 
+/* Fix für Anchor-Links: Verhindert, dass der Sticky-Header die Überschriften überdeckt */
+section[id] {
+    scroll-margin-top: 80px;
+}
+
 /* Header & Navigation */
 header {
     background: var(--white);
@@ -101,6 +106,18 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+/* Über uns */
+.about-content {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
 /* Leistungen */
 .section-title {
     text-align: center;
@@ -144,6 +161,14 @@ footer {
     background: var(--text-dark);
     color: var(--white);
     font-size: 0.9rem;
+}
+
+.map-container {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    line-height: 0;
 }
 
 /* Mobil-Optimierung */
