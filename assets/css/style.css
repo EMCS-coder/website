@@ -183,6 +183,11 @@ nav ul li a:hover {
     padding: 60px 0;
 }
 
+.contact-section a {
+    color: var(--primary-blue);
+    text-decoration: underline;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
