@@ -77,6 +77,23 @@ nav ul li a:hover {
     color: var(--primary-blue);
 }
 
+/* Mobile Menu Toggle (Hidden by default) */
+.nav-toggle { display: none; }
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
+    display: block;
+    background: var(--text-dark);
+    height: 2px;
+    width: 25px;
+    position: relative;
+}
+.nav-toggle-label span::before { content: ''; position: absolute; top: 8px; }
+.nav-toggle-label span::after { content: ''; position: absolute; bottom: 8px; }
+
 /* Hero Bereich */
 .hero {
     background: var(--primary-blue);
@@ -160,7 +177,17 @@ footer {
     padding: 20px 0;
     background: var(--text-dark);
     color: var(--white);
-    font-size: 0.9rem;
+}
+
+.footer-links {
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 5px;
 }
 
 .map-container {
@@ -174,5 +201,20 @@ footer {
 /* Mobil-Optimierung */
 @media (max-width: 768px) {
     .grid { grid-template-columns: 1fr; }
-    nav ul { display: none; } /* Vereinfacht für das Beispiel */
+    
+    .nav-toggle-label { display: block; }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+    }
+    .nav-menu li { margin: 10px 0; }
+    .nav-menu li a { margin-left: 0; }
+    .nav-toggle:checked ~ .nav-menu { display: flex; }
 }
